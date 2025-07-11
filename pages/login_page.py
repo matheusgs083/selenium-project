@@ -25,3 +25,6 @@ class LoginPage(BasePage):
     def login_sucess(self):
         self.is_displayed(self.sucess_message)
 
+    def check_text(self, text):
+        text_finded = self.check_text(self.error_message_login)
+        assert text_finded == text, f"Expected text '{text}' not found, found '{text_finded}'"
